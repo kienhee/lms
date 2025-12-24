@@ -44,6 +44,14 @@ export default defineConfig({
                 //User
                 "resources/js/admin/pages/user/list.js",
                 "resources/js/admin/pages/user/form.js",
+                //Course
+                "resources/js/admin/pages/course/form.js",
+                "resources/js/admin/pages/course/list.js",
+                //Lesson
+                "resources/js/admin/pages/lesson/form.js",
+                //Academy
+                "resources/js/admin/pages/academy/course.js",
+                "resources/js/admin/pages/academy/dashboard.js",
                 // -----------Pages-----------
             ],
             refresh: true,

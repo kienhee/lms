@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             selector: "textarea#editor",
 
             // Basic settings
-            height: 500,
+            height: 600,
             menubar: false,
             promotion: false,
             branding: false,
@@ -136,7 +136,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Content style - prevent selection and cursor in code blocks + custom scrollbar
             content_style: `
-                body.article-content { padding: 1em; }
+                body.article-content { 
+                    padding: 1em; 
+                    overflow-y: auto;
+                    max-height: 100%;
+                }
+                /* Enable scrollbar for editor iframe */
+                .tox-edit-area__iframe {
+                    overflow-y: auto !important;
+                }
                 /* Prevent text selection and cursor in Highlight.js code blocks */
                 body.article-content pre.hljs-code-block,
                 body.article-content pre.hljs-code-block code {
@@ -214,6 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Autoresize settings
             min_height: 600,
+            max_height: 800,
             autoresize_bottom_margin: 50,
             autoresize_overflow_padding: 50,
             autoresize_on_init: true,
@@ -365,5 +374,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
-
-

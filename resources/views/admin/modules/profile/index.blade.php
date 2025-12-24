@@ -66,6 +66,12 @@
                         <i class="bx bx-lock-alt me-1"></i> Đổi mật khẩu
                     </button>
                 </li>
+                <li class="nav-item">
+                    <button type="button" class="nav-link" role="tab" data-bs-toggle="tab"
+                        data-bs-target="#my-course-tab" aria-controls="my-course-tab" aria-selected="false">
+                        <i class="bx bx-book-open me-1"></i> Khóa học của tôi
+                    </button>
+                </li>
             </ul>
         </div>
     </div>
@@ -80,6 +86,10 @@
         <!-- Change Password Tab -->
         @include('admin.modules.profile.tabs.change-password')
         <!--/ Change Password Tab -->
+
+        <!-- My Course Tab -->
+        @include('admin.modules.profile.tabs.my-course')
+        <!--/ My Course Tab -->
     </div>
     <!--/ Tab Content -->
 @endsection
@@ -106,9 +116,5 @@
                 $errors->has('instagram_url') ||
                 $errors->has('linkedin_url'));
     </script>
-    @vite([
-        'resources/js/admin/common/uploads/upload-image-alone.js',
-        'resources/js/admin/common/uploads/upload-avatar.js',
-        'resources/js/admin/pages/profile/index.js'
-    ])
+    @vite(['resources/js/admin/common/uploads/upload-image-alone.js', 'resources/js/admin/common/uploads/upload-avatar.js', 'resources/js/admin/pages/profile/index.js'])
 @endpush
