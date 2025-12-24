@@ -16,9 +16,9 @@ return new class extends Migration
             $table->unsignedBigInteger('instructor_id'); // Giảng viên
             $table->unsignedBigInteger('category_id')->nullable(); // Danh mục khóa học
             $table->string('title')->unique();
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('description')->nullable(); // Mô tả ngắn
-            $table->longText('content')->nullable(); // Nội dung chi tiết
+            $table->text('content')->nullable(); // Nội dung chi tiết
             $table->string('thumbnail')->nullable(); // Ảnh đại diện
             $table->decimal('price', 10, 2)->default(0); // Giá gốc
             $table->decimal('sale_price', 10, 2)->nullable(); // Giá khuyến mãi

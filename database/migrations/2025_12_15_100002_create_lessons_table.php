@@ -19,7 +19,7 @@ return new class extends Migration
             $table->enum('type', ['video', 'text', 'quiz', 'assignment'])->default('video');
             $table->string('video_url')->nullable(); // URL video
             $table->string('video_duration')->nullable(); // Thời lượng video (ví dụ: "10:30")
-            $table->longText('content')->nullable(); // Nội dung bài học (cho type text)
+            $table->text('content')->nullable(); // Nội dung bài học (cho type text)
             $table->integer('order')->default(0); // Thứ tự bài học trong chương
             $table->boolean('is_free_preview')->default(false); // Cho xem trước miễn phí
             $table->boolean('is_published')->default(true);
